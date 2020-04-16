@@ -10,4 +10,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # FAQ routes
 GET     /faq                        controllers.FAQController.index()
-POST    /faq                        controllers.FAQController.save(request: Request)
+GET     /faq/:id                    controllers.FAQController.read(id: Integer)
+POST    /faq                        controllers.FAQController.create(request: Request)
+PUT     /faq/:id                    controllers.FAQController.update(request: Request, id: Integer)
+DELETE  /faq/:id                    controllers.FAQController.delete(id: Integer)
